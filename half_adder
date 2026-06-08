@@ -1,0 +1,28 @@
+#! /data/data/com.termux/files/usr/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/data/data/com.termux/files/usr/lib/ivl/system.vpi";
+:vpi_module "/data/data/com.termux/files/usr/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/data/data/com.termux/files/usr/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/data/data/com.termux/files/usr/lib/ivl/v2005_math.vpi";
+:vpi_module "/data/data/com.termux/files/usr/lib/ivl/va_math.vpi";
+S_0xb4000070cc22bf90 .scope module, "half_add" "half_add" 2 6;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /OUTPUT 1 "sum";
+    .port_info 3 /OUTPUT 1 "carry";
+o0xb4000070ac197ff8 .functor BUFZ 1, C4<z>; HiZ drive
+o0xb4000070ac198028 .functor BUFZ 1, C4<z>; HiZ drive
+L_0xb40000713c22bc70 .functor XOR 1, o0xb4000070ac197ff8, o0xb4000070ac198028, C4<0>, C4<0>;
+L_0xb40000713c22b400 .functor AND 1, o0xb4000070ac197ff8, o0xb4000070ac198028, C4<1>, C4<1>;
+v0xb40000726c237cf0_0 .net "a", 0 0, o0xb4000070ac197ff8;  0 drivers
+v0xb40000726c237090_0 .net "b", 0 0, o0xb4000070ac198028;  0 drivers
+v0xb40000726c236d20_0 .net "carry", 0 0, L_0xb40000713c22b400;  1 drivers
+v0xb40000726c236fe0_0 .net "sum", 0 0, L_0xb40000713c22bc70;  1 drivers
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "half_adder.v";
