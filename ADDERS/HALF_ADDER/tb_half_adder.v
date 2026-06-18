@@ -7,15 +7,18 @@ module tb_half_adder;
     reg  B;
     wire Sum;
     wire Carry;
-		// instantiation
-        .A(a),
-        .B(b),
-        .Sum(sum),
-        .Carry(carry)
+	// instantiation
+        half_add uut (
+	.a(A),
+        .b(B),
+        .sum(Sum),
+        .carry(Carry)
     );
 
-    // track vcd
-        $dumpfile("half_adder_wave.vcd"); // Creates the VCD file
+    
+    initial begin
+        // track vcd
+	$dumpfile("half_adder_wave.vcd"); // Creates the VCD file
         $dumpvars(0, tb_half_adder);       // Records all variables in this testbench
         
         // test cases
