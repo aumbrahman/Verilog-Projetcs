@@ -58,9 +58,10 @@ A, B ──► [HA1] ──► sum1, c1
 project01_adders/
 ├── src/
 │   ├── half_adder.v               ← gate-level half adder
+    └── tb_half_adder.v        ← testbench for half adder|     
 │   ├── full_adder_structural.v    ← structural (uses half_adder)
 │   ├── full_adder_dataflow.v      ← dataflow (assign)
-│   └── full_adder_behavioral.v   ← behavioral (always block)
+│   └── full_adder_behavioral.v    ← behavioral (always block)
 ├── tb/
 │   └── tb_full_adder.v            ← self-checking exhaustive testbench
 ├── sim/
