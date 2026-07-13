@@ -144,10 +144,3 @@ gtkwave sim/mux4to1.vcd
 ```
 
 ---
-
-## What's next
-
-**Project 04** builds the first real arithmetic unit — an 8-bit ALU with
-add, subtract, AND, OR, XOR operations and status flags (zero, carry,
-overflow). It uses `case` on an opcode, exactly like an instruction decoder.
-This is the heart of every CPU ever made.
