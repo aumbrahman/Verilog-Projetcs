@@ -173,7 +173,25 @@ If your testbench generates a VCD file, such as `alu.vcd`, open it with:
 gtkwave alu.vcd
 ```
 
-A waveform viewer helps you inspect input operands, opcodes, results, and status flags over simulation time.
+## Simulation Results
+
+The ALU was simulated using Icarus Verilog, and the generated VCD waveform was inspected using GTKWave.
+
+The waveform demonstrates the execution of all eight ALU operations: ADD, SUB, AND, OR, XOR, NOT, SHL, and SHR.
+
+### GTKWave Simulation
+
+![8-bit ALU GTKWave Simulation](waveform.png)
+
+### Verification Summary
+
+- **Data width:** 8 bits
+- **Supported operations:** 8
+- **Test cases passed:** 26
+- **Test cases failed:** 0
+
+The testbench reported 26 passing tests and zero failures. These results reflect the checks implemented in the testbench; additional edge-case testing may be needed to establish complete functional coverage.
+
 
 ## Design Methodology
 
@@ -192,23 +210,10 @@ The internal `full_result` register is `WIDTH+1` bits wide, allowing the design 
 Future improvements to this project include:
 
 - Developing a self-checking testbench for all eight operations.
-- Testing parameter configurations such as 8-bit, 16-bit, and 32-bit ALUs.
-- Adding comparison operations such as equality and less-than.
-- Adding arithmetic right shift.
 - Standardizing subtraction carry and borrow behavior.
 - Integrating the ALU into a processor datapath.
 - Synthesizing the design for FPGA implementation.
 
-## Learning Outcomes
-
-Through this project, I am exploring:
-
-- Combinational RTL design using Verilog.
-- Parameterized hardware modules.
-- Arithmetic and bitwise operations.
-- Signed overflow detection.
-- Status flag generation.
-- RTL simulation and waveform analysis.
 
 ## Tools Used
 
@@ -217,6 +222,3 @@ Through this project, I am exploring:
 - **Waveform Viewer:** GTKWave
 - **Operating System:** Ubuntu Linux
 
-## Author
-
-Developed as part of my learning journey in digital electronics, Verilog HDL, and VLSI design.
