@@ -6,8 +6,7 @@ This project is part of my journey into **digital design, RTL development, and V
 
 ## Features
 
-- Configurable data width using Verilog parameters.<img width="1366" height="768" alt="waveform" src="https://github.com/user-attachments/assets/4257ddfe-c884-4817-bb38-cdf98d5fc118" />
-
+- Configurable data width using Verilog parameters.
 - Arithmetic operations: Addition and Subtraction.
 - Logical operations: AND, OR, XOR, and NOT.
 - Shift operations: Logical Shift Left and Logical Shift Right.
@@ -179,6 +178,9 @@ gtkwave alu.vcd
 The ALU was simulated using Icarus Verilog, and the generated VCD waveform was inspected using GTKWave.
 
 The waveform demonstrates the execution of all eight ALU operations: ADD, SUB, AND, OR, XOR, NOT, SHL, and SHR.
+
+<img width="1366" height="768" alt="waveform" src="https://github.com/user-attachments/assets/4257ddfe-c884-4817-bb38-cdf98d5fc118" />
+
 
 ### GTKWave Simulation
 
