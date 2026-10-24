@@ -147,6 +147,9 @@ vvp sim/tb_barrel_shifter
 
 ### Expected output — Barrel Shifter
 
+<img width="1366" height="768" alt="Screenshot from 2026-10-24 23-38-29" src="https://github.com/user-attachments/assets/eec01749-b00d-45b4-ba4e-c0191dbd0c45" />
+
+
 ```
 ==============================================
   Barrel Shifter 8-bit Testbench
