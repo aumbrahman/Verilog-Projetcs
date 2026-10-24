@@ -126,6 +126,9 @@ vvp sim/tb_barrel_shifter
 
 ### Expected output — Priority Encoder
 
+<img width="1366" height="768" alt="Screenshot from 2026-10-24 22-56-56" src="https://github.com/user-attachments/assets/15dc8392-5f43-4523-94c9-d985f54f5a63" />
+
+
 ```
 ==============================================
   Priority Encoder 8-to-3 Testbench
