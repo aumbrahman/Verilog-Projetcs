@@ -1,15 +1,5 @@
 `timescale 1ns/1ps
-// ============================================================
-//  Testbench — 8-to-3 Priority Encoder
-//
-//  Test strategy:
-//    1. Each single bit high (in=8'b00000001 to 8'b10000000)
-//       → confirms basic encoding for each input line
-//    2. Multiple bits high simultaneously
-//       → confirms highest bit wins
-//    3. All zeros → valid=0
-//    4. All ones  → bit 7 wins
-// ============================================================
+
 module tb_priority_encoder;
 
     reg  [7:0] in;
@@ -23,7 +13,7 @@ module tb_priority_encoder;
     );
 
     initial begin
-        $dumpfile("sim/priority_encoder.vcd");
+        $dumpfile("priority_encoder.vcd");
         $dumpvars(0, tb_priority_encoder);
     end
 

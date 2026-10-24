@@ -1,26 +1,5 @@
 `timescale 1ns/1ps
-// ============================================================
-//  8-to-3 Priority Encoder
-//
-//  Takes 8 input lines. Outputs the 3-bit binary index of the
-//  HIGHEST active (logic-1) input. If multiple inputs are high
-//  simultaneously, the highest-numbered one wins (highest priority).
-//
-//  Ports:
-//    in    [7:0]  — 8 input request lines
-//    out   [2:0]  — binary index of highest active input
-//    valid        — 1 if any input is active, 0 if in==8'b00000000
-//
-//  New concept: casez
-//    Like case, but '?' in a branch label means "don't care" —
-//    that bit can be 0 or 1 and still match.
-//    This is perfect for priority encoding: once we find the
-//    highest set bit, we don't care what the lower bits are.
-//
-//  Real-world use:
-//    CPU interrupt controllers (Intel 8259A PIC),
-//    bus arbiters, memory arbiter priority logic.
-// ============================================================
+
 module priority_encoder (
     input  wire [7:0] in,
     output reg  [2:0] out,
